@@ -1,13 +1,14 @@
+
 /* ===== FILE: styles.css ===== */
-/=============== GOOGLE FONTS ===============/
+/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
 
-/=============== VARIABLES CSS ===============/
+/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
-  /========== Colors ==========/
-  /Color mode HSL(hue, saturation, lightness)/
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(14, 98%, 50%);
   --black-color: hsl(0, 0%, 0%);
   --black-color-light: hsl(0, 0%, 40%);
@@ -18,8 +19,8 @@
   --body-color: hsl(0, 0%, 87%);
   --container-color: hsl(0, 0%, 83%);
 
-  /========== Font and typography ==========/
-  /.5rem = 8px | 1rem = 16px .../
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Bai Jamjuree", sans-serif;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.75rem;
@@ -29,18 +30,18 @@
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
 
-  /========== Font weight ==========/
+  /*========== Font weight ==========*/
   --font-regular: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
 
-  /========== z index ==========/
+  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
-/========== Responsive typography ==========/
+/*========== Responsive typography ==========*/
 @media screen and (min-width: 1150px) {
   :root {
     --biggest-font-size: 4.5rem;
@@ -53,7 +54,7 @@
   }
 }
 
-/=============== BASE ===============/
+/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -91,7 +92,7 @@ img {
   height: auto;
 }
 
-/=============== THEME ===============/
+/*=============== THEME ===============*/
 .nav__buttons {
   display: flex;
   align-items: center;
@@ -105,7 +106,7 @@ img {
   transition: color .3s;
 }
 
-/========== Variables Dark theme ==========/
+/*========== Variables Dark theme ==========*/
 body.dark-theme {
   --first-color: hsl(14, 80%, 50%);
   --black-color: hsl(0, 0%, 18%);
@@ -129,7 +130,7 @@ body.dark-theme {
   background-color: hsla(14, 70%, 50%, .2);
 }
 
-.dark-theme :is(.home_arrow, .homeline, .about_line) {
+.dark-theme :is(.home__arrow, .home__line, .about__line) {
   filter: none;
 }
 
@@ -137,7 +138,7 @@ body.dark-theme {
   background: linear-gradient(90deg, hsla(14, 80%, 50%, .3), hsla(14, 80%, 50%, 0));
 }
 
-.dark-theme :is(.button_ghost, .services_icon i) {
+.dark-theme :is(.button__ghost, .services__icon i) {
   color: var(--white-color);
 }
 
@@ -145,7 +146,7 @@ body.dark-theme {
   background-color: var(--body-color);
 }
 
-.dark-theme :is(.contact_mail, .contactinput, .contact_label) {
+.dark-theme :is(.contact__mail, .contact__input, .contact__label) {
   background-color: var(--container-color);
 }
 
@@ -163,7 +164,7 @@ body.dark-theme {
   background-color: hsl(0, 0%, 40%);
 }
 
-/=============== REUSABLE CSS CLASSES ===============/
+/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -230,7 +231,7 @@ body.dark-theme {
   overflow: hidden; /* For animation ScrollReveal */
 }
 
-/=============== HEADER & NAV ===============/
+/*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
   width: 100%;
@@ -391,7 +392,7 @@ body.dark-theme {
   width: 25%;
 }
 
-/=============== HOME ===============/
+/*=============== HOME ===============*/
 .home__container {
   padding-top: 2rem;
 }
@@ -536,7 +537,7 @@ body.dark-theme {
   }
 }
 
-/=============== BUTTON ===============/
+/*=============== BUTTON ===============*/
 .button,
 .button__ghost {
   display: flex;
@@ -576,7 +577,7 @@ body.dark-theme {
   border: 3px solid var(--first-color);
 }
 
-/=============== ABOUT ===============/
+/*=============== ABOUT ===============*/
 .about {
   background-color: var(--container-color);
   transition: background-color .4s; /* for dark mode */
@@ -730,7 +731,7 @@ body.dark-theme {
   margin-bottom: 1.25rem;
 }
 
-.services_card:hover .services_border {
+.services__card:hover .services__border {
   transform: translate(.75rem, .75rem);
 } */
 
@@ -746,7 +747,7 @@ body.dark-theme {
 
 /* paste */
 
-/=============== PROJECTS ===============/
+/*=============== PROJECTS ===============*/
 .projects {
   background-color: var(--container-color);
   transition: background-color .4s; /* for dark mode */
@@ -833,7 +834,7 @@ body.dark-theme {
   background-color: var(--white-color);
 }
 
-/=============== CONTACT ===============/
+/*=============== CONTACT ===============*/
 /* .contact {
   padding-bottom: 0;
 }
@@ -856,7 +857,7 @@ body.dark-theme {
   transition: background-color .4s;
 }
 
-.contact_data .section_title-2 {
+.contact__data .section__title-2 {
   margin: 0 0 1.5rem;
   transform: translateX(-3rem);
 }
@@ -954,7 +955,7 @@ body.dark-theme {
   opacity: 0;
 }
 
-.contact_form .contact_area {
+.contact__form .contact__area {
   height: 10rem;
 }
 
@@ -974,8 +975,8 @@ body.dark-theme {
 }
 
 
-.contact_input:focus + .contact_label, 
-.contact_input:not(:placeholder-shown).contactinput:not(:focus) + .contact_label {
+.contact__input:focus + .contact__label, 
+.contact__input:not(:placeholder-shown).contact__input:not(:focus) + .contact__label {
   opacity: 1;
   top: -16px;
 }
@@ -1040,7 +1041,7 @@ body.dark-theme {
 } */
 
 
-/=============== FOOTER ===============/
+/*=============== FOOTER ===============*/
 .footer {
   background-color: var(--black-color);
 }
@@ -1076,7 +1077,7 @@ body.dark-theme {
   font-weight: var(--font-medium);
 }
 
-/=============== SCROLL BAR ===============/
+/*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;
   border-radius: .5rem;
@@ -1090,7 +1091,7 @@ body.dark-theme {
   background-color: hsl(0, 0%, 45%);
 }
 
-/=============== SCROLL UP ===============/
+/*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -1113,7 +1114,7 @@ body.dark-theme {
   bottom: 3rem;
 }
 
-/=============== BREAKPOINTS ===============/
+/*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 340px) {
   .container {
@@ -1135,7 +1136,7 @@ body.dark-theme {
   /* .contact__data {
     width: 100%;
   }
-  .contact_data .section_title-2 {
+  .contact__data .section__title-2 {
     transform: translateX(0);
   } */
 
@@ -1388,7 +1389,7 @@ body.dark-theme {
     height: 64px;
     right: -.75rem;
   }
-  .about_container .section_title-1 {
+  .about__container .section__title-1 {
     align-self: flex-end;
     margin-inline: 0;
   }
@@ -1439,7 +1440,7 @@ body.dark-theme {
   .services__title {
     margin-bottom: 1.5rem;
   }
-  .services_card:hover .services_border {
+  .services__card:hover .services__border {
     transform: translate(1.25rem, 1.25rem);
   }
 
@@ -1478,7 +1479,7 @@ body.dark-theme {
   .contact__box {
     height: 60px;
   }
-  .contact_form .contact_area {
+  .contact__form .contact__area {
     height: 11rem;
   }
   .contact__button {
@@ -1492,7 +1493,7 @@ body.dark-theme {
     margin: 7.5rem 0 0 8rem;
     border-bottom: 6px solid var(--first-color);
   }
-  .contact_data .section_title-2 {
+  .contact__data .section__title-2 {
     margin: 0 0 2rem;
     transform: translateX(-6.5rem);
   }
@@ -1564,7 +1565,7 @@ body.dark-theme {
 
 
 
-/==================== REUSABLE CLASSES ====================/
+/*==================== REUSABLE CLASSES ====================*/
 .section {
   padding: 2rem 0 4rem;
 }
@@ -1582,7 +1583,7 @@ body.dark-theme {
   text-align: center;
 }
 
-/==================== ABOUT ====================/
+/*==================== ABOUT ====================*/
 /* .about__img {
   
   margin-bottom: 20px;
@@ -1642,7 +1643,7 @@ body.dark-theme {
   justify-content: center;
 }
 
-/==================== BUTTON ====================/
+/*==================== BUTTON ====================*/
 .button {
   display: inline-block;
   background-color: rgb(7, 7, 7);
@@ -1701,7 +1702,7 @@ body.dark-theme {
     grid-template-columns: repeat(2, max-content);
   }
 
-  .section_title,.section_subtitle{
+  .section__title,.section__subtitle{
 
     display: block;
     text-align: center;
@@ -2038,7 +2039,7 @@ body.dark-theme {
   resize: none;
 }
 
-.contact_form .contact_button {
+.contact__form .contact__button {
   border: none;
   background: none;
   font-size: var(--h2-font-size);
@@ -2049,7 +2050,7 @@ body.dark-theme {
   margin-top: .75rem;
 }
 
-.contact_form .contact_button i {
+.contact__form .contact__button i {
   font-size: 1.5rem;
   font-weight: initial;
 }
