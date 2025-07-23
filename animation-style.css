@@ -1,0 +1,66 @@
+/* animation-style.css */
+
+/* Background gradient for body */
+body {
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  color: white;
+  font-family: 'Bai Jamjuree', sans-serif;
+  animation: backgroundShift 10s ease infinite;
+}
+
+/* Animate background gradient shift */
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Headings with gradient text */
+h1, h2, h3 {
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  animation: fadeInText 2s ease forwards;
+  opacity: 0;
+}
+
+/* Fade-in animation for text */
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button with motion color effect */
+.button {
+  background-color: #e52e71;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.button:hover {
+  background-color: #ff8a00;
+}
+
+/* Pulse animation for button */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px #e52e71;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff8a00;
+  }
+}
