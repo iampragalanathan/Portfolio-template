@@ -1676,9 +1676,9 @@ body {
   background-size: 800% 800%;
   animation: gradientAnimation 15s ease infinite;
   / Preserve text color and transition */
-  color: var(--text-color);
-  transition: background-color .4s, color .4s;
-}
+  /* color: var(--text-color);
+  transition: background-color .4s, color .4s; */
+
 
 /* Different gradient for dark theme */
 body.dark-theme {
