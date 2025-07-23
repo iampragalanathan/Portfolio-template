@@ -1,0 +1,51 @@
+/* Container with animated gradient background */
+.animated-background {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 800% 800%;
+  animation: gradientAnimation 15s ease infinite;
+  border-radius: 15px;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Text with color transition using background-clip */
+.animated-background span {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 400% 400%;
+  animation: textGradient 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Background gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Text gradient color animation */
+@keyframes textGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
