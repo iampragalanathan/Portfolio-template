@@ -1,66 +1,89 @@
-/* animation-style.css */
+/* Professional, modern style */
 
-/* Background gradient for body */
+/* Import a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #183153;
+  --secondary: #235789;
+  --accent: #f6c90e;
+  --bg-gradient: linear-gradient(120deg, #f9fafc, #e6ebf5 90%);
+  --font-main: 'Inter', 'Bai Jamjuree', sans-serif;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(24,49,83,.07);
+}
+
+/* Background with subtle gradient */
 body {
-  background: linear-gradient(45deg, #ff6a00, #ee0979);
-  color: white;
-  font-family: 'Bai Jamjuree', sans-serif;
-  animation: backgroundShift 10s ease infinite;
+  background: var(--bg-gradient);
+  color: var(--primary);
+  font-family: var(--font-main);
+  min-height: 100vh;
 }
 
-/* Animate background gradient shift */
-@keyframes backgroundShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Headings with gradient text */
+/* Professional headings */
 h1, h2, h3 {
+  font-family: var(--font-main);
   font-weight: 700;
-  background: linear-gradient(90deg, #ff8a00, #e52e71);
-  /* -webkit-background-clip: text; */
-  -webkit-text-fill-color: transparent;
-  animation: fadeInText 2s ease forwards;
-  opacity: 0;
+  color: var(--primary);
+}
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: 2rem;
+  color: var(--secondary);
 }
 
-/* Fade-in animation for text */
-@keyframes fadeInText {
-  to {
-    opacity: 1;
-  }
+/* Animated underline for links */
+a {
+  color: var(--secondary);
+  position: relative;
+  text-decoration: none;
+  transition: color .2s;
+}
+a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width .3s;
+  position: absolute;
+  bottom: 0; left: 0;
+}
+a:hover {
+  color: var(--primary);
+}
+a:hover::after {
+  width: 100%;
 }
 
-/* Button with motion color effect */
+/* Content container for neat spacing */
+.container {
+  max-width: 1024px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Modern button styles with subtle animation */
 .button {
-  background-color: #e52e71;
+  background: var(--secondary);
+  color: #fff;
   border: none;
-  color: white;
-  padding: 1rem 2rem;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius);
   font-weight: 600;
-  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: background .2s, transform .15s;
+  box-shadow: 0 1px 4px rgba(24,49,83,0.08);
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  animation: pulse 2s infinite;
 }
-
-.button:hover {
-  background-color: #ff8a00;
-}
-
-/* Pulse animation for button */
-@keyframes pulse {
-  0%, 100% {
-    box-shadow: 0 0 10px #e52e71;
-  }
-  50% {
-    box-shadow: 0 0 20px #ff8a00;
-  }
+.button:hover, .button:focus {
+  background: var(--primary);
+  transform: translateY(-2px) scale(1.03);
 }
